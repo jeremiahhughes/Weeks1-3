@@ -224,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034023590}
   - component: {fileID: 1034023589}
-  - component: {fileID: 1034023588}
+  - component: {fileID: 1034023591}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -232,18 +232,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1034023588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034023587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631c8807e04b15741945b56668fc4e82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1034023589
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -311,6 +299,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1034023591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034023587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631c8807e04b15741945b56668fc4e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
