@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class TargetMovement : MonoBehaviour
 {
-    public float speed = 1f; // Speed of movement
-    public float range = 3f; // Range of back and forth motion
-    private Vector2 startPosition;
+    // Speed of the target's horizontal movement
+    float speed = 0.01f;
     // Start is called before the first frame update
     void Start()
     {
-        // Storing the initial position
-        startPosition = transform.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Using Mathf.PingPong to return a value between 0 and my range no more and no less
-        float offset = Mathf.PingPong(Time.time * speed, range);
-        transform.position = new Vector2(startPosition.x + offset, startPosition.y);
+        // Get the current position of the target
+        Vector2 pos = transform.position;
+        pos.x += speed;
+
+        // Converting the target position from world space to screen space.
+        Vector2 squareInScreenSpace = Camera.main.WorldToScreenPoint(pos);
+        
+        // Checking if the target is moving beyond the edges of the screen
+        if (squareInScreenSpace.x < -10 || squareInScreenSpace.x > Screen.width)
+        {
+            speed = speed * -1;
+        }
+
+        transform.position = pos;
     }
 }
+
