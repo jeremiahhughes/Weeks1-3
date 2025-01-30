@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TargetClickHandler : MonoBehaviour
 {
-    public GameObject BulletPrefab; // Assign in Inspector
+    public GameObject BulletPrefab; 
     public float bulletLifetime = 2f; // Time before bullet disappears
 
     void Update()
